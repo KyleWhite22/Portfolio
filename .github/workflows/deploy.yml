@@ -45,3 +45,17 @@ jobs:
 
       - name: Invalidate CloudFront
         run: aws cloudfront create-invalidation --distribution-id $DIST_ID --paths "/*"
+
+      - name: Clear bucket (keep index.html)
+        run: aws s3 rm s3://$BUCKET --recursive --exclude "index.html"
+
+      - name: Sync assets (long cache)
+        run: |
+          aws s3 sync "$SOURCE_DIR"/ s3://$BUCKET --delete \
+            --exclude "index.html" \
+            --cache-control "public,max-age=31536000,immutable"
+
+      - name: Upload index.html (no cache)
+        run: |
+          aws s3 cp "$SOURCE_DIR"/index.html s3://$BUCKET/index.html \
+            --cache-control "no-cache" --content-type "text/html"
