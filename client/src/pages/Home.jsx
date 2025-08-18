@@ -14,6 +14,7 @@ function Home() {
         <nav className="nav-links">
           <Link to="/education" className="nav-link">Education</Link>
           <Link to="/work" className="nav-link">Work</Link>
+          <a href="https://game.kyle-white.com" rel="noopener">GameGeniusAI</a>
         </nav>
       </header>
 
