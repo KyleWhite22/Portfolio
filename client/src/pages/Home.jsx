@@ -30,9 +30,7 @@ function Home() {
 
         {/* Foreground content spanning the hero */}
         <div className="hero-content">
-          <div className="hero-media">
-            <img src={kyleImg} alt="Kyle White" className="homeAvatar-img" />
-          </div>
+          
 
           <div className="hero-text">
             <h1 className="name">Kyle White</h1>
