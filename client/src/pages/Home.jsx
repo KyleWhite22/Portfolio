@@ -36,7 +36,7 @@ function Home() {
 
           <div className="hero-text">
             <h1 className="name">Kyle White</h1>
-            <p className="tagline">Full-stack developer </p>
+            <p className="tagline">Full-stack developer at OSU</p>
 
             <div className="hero-actions">
               <Link to="/work" className="btn primary">View Work</Link>
