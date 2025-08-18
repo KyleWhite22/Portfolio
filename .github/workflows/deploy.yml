@@ -9,7 +9,7 @@ permissions:
 
 env:
   SOURCE_DIR: .                      
-  BUCKET: portfolio.kyle-white.com   
+  BUCKET: kyle-white.com   
   DIST_ID: E1LA57KS9MHIPN            
 
 jobs:
