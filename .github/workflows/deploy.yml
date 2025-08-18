@@ -8,7 +8,7 @@ permissions:
   contents: read
 
 env:
-  SOURCE_DIR: .                      
+  SOURCE_DIR: client                   
   BUCKET: kyle-white.com   
   DIST_ID: E1LA57KS9MHIPN            
 
