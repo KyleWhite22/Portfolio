@@ -16,3 +16,8 @@ body {
   @apply bg-black text-white;
   font-family: 'Orbitron', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
+@keyframes pulseGlow {
+  0%   { filter: drop-shadow(0 0 5px #22d3ee) drop-shadow(0 0 10px #22d3ee); }
+  50%  { filter: drop-shadow(0 0 12px #22d3ee) drop-shadow(0 0 24px #22d3ee); }
+  100% { filter: drop-shadow(0 0 5px #22d3ee) drop-shadow(0 0 10px #22d3ee); }
+}
