@@ -62,23 +62,54 @@ function PaddleIcon({ className }: { className?: string }) {
     );
 }
 function GamepadIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 64 64"
-      className={className}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g transform="translate(-2,-8)">
-        <path
-          d="M16 28c-6 0-10 5-10 12s4 12 10 12c2.5 0 4.5-1.2 6-3l2-2c1-1 2.3-1.5 3.7-1.5h8.6c1.4 0 2.7.5 3.7 1.5l2 2c1.5 1.8 3.5 3 6 3 6 0 10-5 10-12s-4-12-10-12H16Z"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3"
-          strokeLinejoin="round"
-        />
-      </g>
-    </svg>
-  );
+    return (
+        <svg
+            viewBox="0 0 64 64"
+            className={className}
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <g transform="translate(-2,-8)">
+                <path
+                    d="M16 28c-6 0-10 5-10 12s4 12 10 12c2.5 0 4.5-1.2 6-3l2-2c1-1 2.3-1.5 3.7-1.5h8.6c1.4 0 2.7.5 3.7 1.5l2 2c1.5 1.8 3.5 3 6 3 6 0 10-5 10-12s-4-12-10-12H16Z"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinejoin="round"
+                />
+            </g>
+        </svg>
+    );
+}
+// Add this next to PaddleIcon/GamepadIcon
+function DocumentIcon({ className }: { className?: string }) {
+    return (
+        <svg
+            viewBox="0 0 64 64"
+            className={className}
+            role="img"
+            aria-label="Degree Audit Parser"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            {/* Document outline */}
+            <rect
+                x="14"
+                y="10"
+                width="36"
+                height="48"
+                rx="6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="3"
+            />
+            {/* Horizontal lines */}
+            <g stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                <line x1="20" y1="24" x2="44" y2="24" />
+                <line x1="20" y1="32" x2="44" y2="32" />
+                <line x1="20" y1="40" x2="38" y2="40" />
+                <line x1="20" y1="48" x2="32" y2="48" />
+            </g>
+        </svg>
+    );
 }
 export default function Hero() {
     return (
@@ -154,6 +185,16 @@ export default function Hero() {
                             title="GameGeniusAI"
                         >
                             <GamepadIcon className="h-7 w-7" />
+                        </a>
+                        <a
+                            href="https://degreeauditparse.kyle-white.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:scale-110 transition-transform text-red-500"
+                            aria-label="OSU Degree Audit Parser"
+                            title="OSU Degree Audit Parser"
+                        >
+                            <DocumentIcon className="h-7 w-7" />
                         </a>
                     </div>
                 </div>
