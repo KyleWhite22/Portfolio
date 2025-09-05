@@ -42,7 +42,9 @@ export default function AppShell() {
 
   return (
     <div className="min-h-dvh bg-black text-white scroll-smooth">
-      <header className="sticky top-0 z-30 w-full border-b border-white/10 bg-black/60 backdrop-blur">
+      <header className="sticky top-0 z-30 w-full border-b border-white/10
+                   bg-zinc-950 shadow-lg shadow-black/20
+                   md:bg-black/60 md:backdrop-blur">
         <div className="flex w-full items-center justify-between gap-4 px-4 md:px-8 py-3">
           {/* Logo to Top */}
           <Link to="/#hero" className="flex items-center gap-2">
@@ -79,12 +81,12 @@ export default function AppShell() {
         </div>
 
         {/* Mobile drawer */}
-        
-         {open && (
+
+        {open && (
           <div className="md:hidden fixed inset-0 z-40">
             {/* backdrop */}
             <button
-              className="absolute inset-0 bg-black/60"
+              className="absolute inset-0 bg-black/70"
               aria-label="Close menu"
               onClick={() => setOpen(false)}
             />
@@ -102,7 +104,7 @@ export default function AppShell() {
                   ✕
                 </button>
               </div>
-               {NavLinkBtn("/#hero", "Top", "hero", () => setOpen(false))}
+              {NavLinkBtn("/#hero", "Top", "hero", () => setOpen(false))}
               {NavLinkBtn("/#projects", "Projects", "projects", () => setOpen(false))}
               {NavLinkBtn("/#work", "Work", "work", () => setOpen(false))}
               {NavLinkBtn("/#education", "Classes", "education", () => setOpen(false))}
