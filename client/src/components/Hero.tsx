@@ -141,62 +141,107 @@ export default function Hero() {
                         Full-stack Developer @ OSU
                     </p>
 
-                    {/* Social links */}
-                    <div className="mt-8 flex justify-center md:justify-start gap-5 text-zinc-300">
-                        <a
-                            href="https://github.com/kylewhite22"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-white transition-colors"
-                        >
-                            <Github className="h-7 w-7" />
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/kylewhite22/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-white transition-colors"
-                        >
-                            <Linkedin className="h-7 w-7" />
-                        </a>
-                        <a
-                            href="mailto:kewhite900@gmail.com"
-                            className="hover:text-white transition-colors"
-                        >
-                            <Mail className="h-7 w-7" />
-                        </a>
-                        <a
-                            href="https://pickle.kyle-white.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:scale-110 transition-transform text-orange-500"
-                            aria-label="Pickleball Analytics"
-                            title="Pickleball Analytics"
-                        >
-                            <PaddleIcon className="h-7 w-7" />
-                        </a>
+                    {/* Single-row bubble with top labels + vertical divider */}
 
-                        <a
-                            href="https://game.kyle-white.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:scale-110 transition-transform text-green-500"
-                            aria-label="GameGeniusAI"
-                            title="GameGeniusAI"
-                        >
-                            <GamepadIcon className="h-7 w-7" />
-                        </a>
-                        <a
-                            href="https://degreeauditparse.kyle-white.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:scale-110 transition-transform text-red-500"
-                            aria-label="OSU Degree Audit Parser"
-                            title="OSU Degree Audit Parser"
-                        >
-                            <DocumentIcon className="h-7 w-7" />
-                        </a>
+
+
+
+                    {/* Single-row bubble with CENTERED labels + tighter spacing */}
+                    <div className="mt-8 md:mt-10 inline-flex">
+                        <div className="flex items-start gap-4 rounded-2xl bg-black/70 border border-white/10 px-4 py-3 shadow-lg shadow-black/30 backdrop-blur-sm overflow-x-auto">
+                            {/* Socials group */}
+                            <div className="flex flex-col items-center">
+                                <span className="mb-1 text-[10px] uppercase tracking-wider text-zinc-400 text-center">
+                                    Socials
+                                </span>
+                                <div className="flex items-center gap-4 text-zinc-300">
+                                    <a
+                                        href="https://github.com/kylewhite22"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white/30 rounded-md"
+                                        aria-label="GitHub"
+                                        title="GitHub"
+                                    >
+                                        <Github className="h-7 w-7" />
+                                    </a>
+                                    <a
+                                        href="https://www.linkedin.com/in/kylewhite22/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white/30 rounded-md"
+                                        aria-label="LinkedIn"
+                                        title="LinkedIn"
+                                    >
+                                        <Linkedin className="h-7 w-7" />
+                                    </a>
+                                    <a
+                                        href="mailto:kewhite900@gmail.com"
+                                        className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white/30 rounded-md"
+                                        aria-label="Email"
+                                        title="Email"
+                                    >
+                                        <Mail className="h-7 w-7" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* Slim vertical divider */}
+                            <div className="self-stretch mx-2 w-px bg-white/10" aria-hidden="true" />
+
+                            {/* Projects group */}
+                            <div className="flex flex-col items-center">
+                                <span className="mb-1 text-[10px] uppercase tracking-wider text-zinc-400 text-center">
+                                    Live Projects
+                                </span>
+                                <div className="flex items-center gap-4">
+                                    <a
+                                        href="https://pickle.kyle-white.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:scale-110 transition-transform text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/40 rounded-md"
+                                        aria-label="Pickleball Analytics"
+                                        title="Pickleball Analytics"
+                                    >
+                                        <PaddleIcon className="h-7 w-7" />
+                                    </a>
+
+                                    <a
+                                        href="https://game.kyle-white.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:scale-110 transition-transform text-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/40 rounded-md"
+                                        aria-label="GameGeniusAI"
+                                        title="GameGeniusAI"
+                                    >
+                                        <GamepadIcon className="h-7 w-7 -translate-y-[1px]" />
+                                    </a>
+
+                                    <a
+                                        href="https://degreeauditparse.kyle-white.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:scale-110 transition-transform text-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/40 rounded-md"
+                                        aria-label="Degree Audit Parser"
+                                        title="Degree Audit Parser"
+                                    >
+                                        <DocumentIcon className="h-7 w-7" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
+
+
+
+
+
+
+
+
+
                 </div>
             </div>
 
