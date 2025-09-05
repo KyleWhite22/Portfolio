@@ -147,13 +147,15 @@ export default function Hero() {
 
 
                     {/* Single-row bubble with CENTERED labels + tighter spacing */}
-                    <div className="mt-8 md:mt-10 inline-flex">
-                        <div className="flex items-start gap-4 rounded-2xl bg-black/70 border border-white/10 px-4 py-3 shadow-lg shadow-black/30 backdrop-blur-sm overflow-x-auto">
-                            {/* Socials group */}
-                            <div className="flex flex-col items-center">
-                                <span className="mb-1 text-[10px] uppercase tracking-wider text-zinc-400 text-center">
-                                    Socials
-                                </span>
+                    <div className="mt-8 md:mt-10 flex justify-center md:justify-start">
+  <div className="w-fit mx-auto md:mx-0 flex items-start gap-4 rounded-2xl
+                  bg-black/70 border border-white/10 px-4 py-3 shadow-lg shadow-black/30
+                  backdrop-blur-sm overflow-x-auto">
+    {/* Socials group */}
+    <div className="flex flex-col items-center">
+      <span className="mb-1 text-[10px] uppercase tracking-wider text-zinc-400 text-center">
+        Socials
+      </span>
                                 <div className="flex items-center gap-4 text-zinc-300">
                                     <a
                                         href="https://github.com/kylewhite22"
@@ -187,13 +189,13 @@ export default function Hero() {
                             </div>
 
                             {/* Slim vertical divider */}
-                            <div className="self-stretch mx-2 w-px bg-white/10" aria-hidden="true" />
+    <div className="self-stretch mx-2 w-px bg-white/10" aria-hidden="true" />
 
                             {/* Projects group */}
-                            <div className="flex flex-col items-center">
-                                <span className="mb-1 text-[10px] uppercase tracking-wider text-zinc-400 text-center">
-                                    Live Projects
-                                </span>
+                             <div className="flex flex-col items-center">
+      <span className="mb-1 text-[10px] uppercase tracking-wider text-zinc-400 text-center">
+        Live Projects
+      </span>
                                 <div className="flex items-center gap-4">
                                     <a
                                         href="https://pickle.kyle-white.com"
