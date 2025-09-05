@@ -1,27 +1,14 @@
 // src/pages/Home.tsx
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
+import Work from "../components/Work";
 
 export default function Home() {
   return (
     <div className="w-full">
       <Hero />
       <Projects />
-      {/* WORK */}
-      <section id="work" className="min-h-screen bg-zinc-900 text-white p-10 scroll-mt-24">
-        <h2 className="text-3xl font-bold mb-6">Work Experience</h2>
-        <ul className="space-y-6">
-          <li>
-            <h3 className="text-xl font-semibold">Kroger – Software Intern</h3>
-            <p>Summer 2025 | IT Infrastructure Developer</p>
-          </li>
-          <li>
-            <h3 className="text-xl font-semibold">Cincinnati Insurance Co.</h3>
-            <p>Summer 2024 | Software Intern</p>
-          </li>
-        </ul>
-      </section>
-
+     <Work />
       {/* EDUCATION */}
       <section id="education" className="min-h-screen bg-white text-black p-10 scroll-mt-24">
         <h2 className="text-3xl font-bold mb-6">Education</h2>
