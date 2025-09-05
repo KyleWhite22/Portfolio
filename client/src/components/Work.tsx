@@ -48,7 +48,7 @@ const work: WorkItem[] = [
   {
     company: "The Ohio State University",
     role: "Teaching Assistant — Foundations 1: Discrete Structures",
-    dates: "Sep 2024 – Dec 2024",
+    dates: "Fall 2024",
     location: "Columbus, OH",
     bullets: [
       "Held office hous to assist students with homework and prepare for exams."
