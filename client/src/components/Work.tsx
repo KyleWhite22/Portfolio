@@ -120,7 +120,7 @@ export default function Work() {
     <section
       id="work"
       aria-labelledby="work-heading"
-      className="bg-black text-white px-4 md:px-8 py-10 md:py-14 scroll-mt-24"
+      className="bg-zinc-950 text-white px-4 md:px-8 py-10 md:py-14 scroll-mt-24"
     >
       <div className="mx-auto w-full max-w-5xl">
         <h2 id="work-heading" className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">
