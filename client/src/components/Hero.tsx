@@ -45,7 +45,7 @@ export default function Hero() {
           {/* Social links */}
           <div className="mt-8 flex justify-center md:justify-start gap-5 text-zinc-300">
             <a
-              href="https://github.com/kewhite900"
+              href="https://github.com/kylewhite22"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
@@ -53,7 +53,7 @@ export default function Hero() {
               <Github className="h-7 w-7" />
             </a>
             <a
-              href="https://www.linkedin.com/in/kyle-white-/"
+              href="https://www.linkedin.com/in/kylewhite22/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"

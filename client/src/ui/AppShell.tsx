@@ -80,42 +80,31 @@ export default function AppShell() {
 
         {/* Mobile drawer */}
         {open && (
-          <div className="md:hidden fixed inset-0 z-40">
-            {/* backdrop */}
-            <button
-              className="absolute inset-0 bg-black/60"
-              aria-label="Close menu"
-              onClick={() => setOpen(false)}
-            />
-            {/* sheet */}
-            <div className="absolute right-0 top-0 h-full w-[78%] max-w-sm bg-zinc-950 border-l border-white/10 p-4 flex flex-col gap-2">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-lg font-semibold">Menu</span>
-                <button
-                  className="rounded-lg p-2 hover:bg-white/10"
-                  aria-label="Close menu"
-                  onClick={() => setOpen(false)}
-                >
-                  ✕
-                </button>
-              </div>
-              {NavLinkBtn("/#hero", "Top", "hero", () => setOpen(false))}
-              {NavLinkBtn("/#projects", "Projects", "projects", () => setOpen(false))}
-              {NavLinkBtn("/#work", "Work", "work", () => setOpen(false))}
-              {NavLinkBtn("/#education", "Classes", "education", () => setOpen(false))}
-              {NavLinkBtn("/#skills", "Skills", "skills", () => setOpen(false))}
-              <a
-                href="https://game.kyle-white.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg px-3 py-2 font-semibold hover:bg-white/10"
-                onClick={() => setOpen(false)}
-              >
-                GameGeniusAI
-              </a>
-            </div>
-          </div>
-        )}
+  <div className="md:hidden fixed inset-0 z-40">
+    {/* backdrop */}
+    <button
+      className="absolute inset-0 bg-black/60"
+      aria-label="Close menu"
+      onClick={() => setOpen(false)}
+    />
+    {/* sheet */}
+    <div className="absolute right-0 top-0 h-full w-[78%] max-w-sm 
+                    bg-zinc-950 text-white border-l border-white/10 
+                    p-4 flex flex-col gap-2">
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-lg font-semibold">Menu</span>
+        <button
+          className="rounded-lg p-2 hover:bg-white/10"
+          aria-label="Close menu"
+          onClick={() => setOpen(false)}
+        >
+          ✕
+        </button>
+      </div>
+      {/* Links go here */}
+    </div>
+  </div>
+)}
       </header>
 
       <main className="w-full min-h-[calc(100dvh-64px)]">
