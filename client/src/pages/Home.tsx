@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <div className="w-full">
       <Hero />
+        <Work />
       <Projects />
-     <Work />
      <Education />
      <Skills />
     </div>

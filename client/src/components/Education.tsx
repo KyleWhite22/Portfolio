@@ -1,6 +1,6 @@
 // src/pages/Education.tsx
 import React from "react";
-import osuLogo from "../assets/osuLogo.png";
+import osuLogo from "../assets/ohioStateLogo.png";
 // import someOtherLogo from "../assets/someOtherLogo.png";
 
 type EducationItem = {
@@ -30,16 +30,16 @@ const education: EducationItem[] = [
     logoAlt: "Ohio State University logo",
     link: "https://www.osu.edu/",
   },
-  // {
-  //   school: "Your Previous School",
-  //   degree: "Your Degree or Program",
-  //   dates: "2019 – 2023",
-  //   location: "City, State",
-  //   bullets: ["Honors...", "Activities..."],
-  //   logoSrc: someOtherLogo,
-  //   logoAlt: "School logo",
-  //   link: "https://example.edu/",
-  // },
+   {
+     school: "Your Previous School",
+     degree: "Your Degree or Program",
+   dates: "2019 – 2023",
+    location: "City, State",
+    bullets: ["Honors...", "Activities..."],
+    logoSrc: osuLogo,
+    logoAlt: "School logo",
+    link: "https://example.edu/",
+  },
 ];
 
 function EducationCard({
