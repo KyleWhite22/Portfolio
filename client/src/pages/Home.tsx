@@ -1,26 +1,12 @@
 // src/pages/Home.tsx
 import Hero from "../components/Hero";
+import Projects from "../components/Projects";
 
 export default function Home() {
   return (
     <div className="w-full">
       <Hero />
-
-      {/* PROJECTS */}
-      <section id="projects" className="min-h-screen bg-white text-black p-10 scroll-mt-24">
-        <h2 className="text-3xl font-bold mb-6">Projects</h2>
-        <div className="space-y-6">
-          <div className="p-6 bg-zinc-100 rounded-xl shadow">
-            <h3 className="text-xl font-semibold">GameGeniusAI</h3>
-            <p>A Steam-powered game recommender using AI.</p>
-          </div>
-          <div className="p-6 bg-zinc-100 rounded-xl shadow">
-            <h3 className="text-xl font-semibold">Pickleball Analysis</h3>
-            <p>A sports analytics app with AWS backend + Tailwind frontend.</p>
-          </div>
-        </div>
-      </section>
-
+      <Projects />
       {/* WORK */}
       <section id="work" className="min-h-screen bg-zinc-900 text-white p-10 scroll-mt-24">
         <h2 className="text-3xl font-bold mb-6">Work Experience</h2>
