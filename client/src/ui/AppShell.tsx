@@ -79,9 +79,7 @@ export default function AppShell() {
             </svg>
           </button>
         </div>
-
         {/* Mobile drawer */}
-
         {open && (
           <div className="md:hidden fixed inset-0 z-40">
             {/* backdrop */}
@@ -90,34 +88,44 @@ export default function AppShell() {
               aria-label="Close menu"
               onClick={() => setOpen(false)}
             />
-            {/* sheet */}
-            <div className="absolute right-0 top-0 h-full w-[78%] max-w-sm 
-                    bg-zinc-950 text-white border-l border-white/10 
-                    p-4 flex flex-col gap-2">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-lg font-semibold">Menu</span>
-                <button
-                  className="rounded-lg p-2 hover:bg-white/10"
-                  aria-label="Close menu"
+
+            {/* sheet container (no fixed height) */}
+            <div className="absolute right-0 top-0 w-[78%] max-w-sm p-3">
+              {/* panel: only as tall as its contents */}
+              <div
+                role="dialog"
+                aria-label="Menu"
+                className="bg-zinc-950 text-white border-l border-white/10
+                   rounded-l-2xl rounded-b-2xl shadow-2xl
+                   p-4 flex flex-col gap-2
+                   h-auto max-h-[85dvh] overflow-y-auto"
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-lg font-semibold">Menu</span>
+                  <button
+                    className="rounded-lg p-2 hover:bg-white/10"
+                    aria-label="Close menu"
+                    onClick={() => setOpen(false)}
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                {NavLinkBtn("/#hero", "Top", "hero", () => setOpen(false))}
+                {NavLinkBtn("/#projects", "Projects", "projects", () => setOpen(false))}
+                {NavLinkBtn("/#work", "Work", "work", () => setOpen(false))}
+                {NavLinkBtn("/#education", "Classes", "education", () => setOpen(false))}
+                {NavLinkBtn("/#skills", "Skills", "skills", () => setOpen(false))}
+                <a
+                  href="https://game.kyle-white.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg px-3 py-2 font-semibold hover:bg-white/10"
                   onClick={() => setOpen(false)}
                 >
-                  ✕
-                </button>
+                  GameGeniusAI
+                </a>
               </div>
-              {NavLinkBtn("/#hero", "Top", "hero", () => setOpen(false))}
-              {NavLinkBtn("/#projects", "Projects", "projects", () => setOpen(false))}
-              {NavLinkBtn("/#work", "Work", "work", () => setOpen(false))}
-              {NavLinkBtn("/#education", "Classes", "education", () => setOpen(false))}
-              {NavLinkBtn("/#skills", "Skills", "skills", () => setOpen(false))}
-              <a
-                href="https://game.kyle-white.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg px-3 py-2 font-semibold hover:bg-white/10"
-                onClick={() => setOpen(false)}
-              >
-                GameGeniusAI
-              </a>
             </div>
           </div>
         )}
