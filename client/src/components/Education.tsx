@@ -30,16 +30,6 @@ const education: EducationItem[] = [
     logoAlt: "Ohio State University logo",
     link: "https://www.osu.edu/",
   },
-   {
-     school: "Your Previous School",
-     degree: "Your Degree or Program",
-   dates: "2019 – 2023",
-    location: "City, State",
-    bullets: ["Honors...", "Activities..."],
-    logoSrc: osuLogo,
-    logoAlt: "School logo",
-    link: "https://example.edu/",
-  },
 ];
 
 function EducationCard({
