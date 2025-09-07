@@ -27,13 +27,18 @@ const groups: SkillGroup[] = [
   {
     title: "Languages",
     icon: Code2,
-    items: [
+     items: [
       { name: "TypeScript" },
       { name: "JavaScript" },
-      { name: "C#" , hint: "MonoGame" },
-      { name: "C/C++" },
       { name: "Python" },
-      { name: "x86-64 (asm)", hint: "Coursework + projects" },
+      { name: "Java" },
+      { name: "C#" },
+      { name: "C/C++" },
+      { name: "PowerShell" },
+      { name: "HTML" },
+      { name: "CSS" },
+      { name: "MATLAB" },
+      { name: "x86-64 assembly" },
     ],
   },
   {
@@ -50,11 +55,11 @@ const groups: SkillGroup[] = [
     title: "Backend & APIs",
     icon: Server,
     items: [
-      { name: "Node.js / Express" },
-      { name: "Serverless Framework" },
+      { name: "Node.js" },
+      { name: "Express" },
+      { name: "REST, JSON" },
       { name: "OpenAI API" },
       { name: "Steam Web API" },
-      { name: "REST / JSON" },
     ],
   },
   {
@@ -64,44 +69,31 @@ const groups: SkillGroup[] = [
       { name: "AWS Amplify" },
       { name: "Amazon Cognito" },
       { name: "DynamoDB" },
-      { name: "S3 + CloudFront + Route 53", hint: "Hosting + CDN + DNS" },
+      { name: "S3, CloudFront, Route 53", hint: "Hosting + CDN + DNS" },
       { name: "EC2 + Nginx" },
+      { name: "AWS Lambda" },
+      { name: "API Gateway" },
       { name: "GitHub Actions (CI/CD)" },
+            { name: "Kubernetes" },
+      { name: "Helm" },
+
+      { name: "Databricks" },
     ],
   },
   {
     title: "Databases",
     icon: Database,
-    items: [{ name: "MongoDB" }, { name: "DynamoDB" }],
+    items: [{name : "SQL (PostgreSQL)"}, { name: "MongoDB" }, { name: "DynamoDB" }],
   },
   {
     title: "Tools",
     icon: Wrench,
     items: [
       { name: "Git & GitHub" },
-      { name: "Postman / Thunder Client" },
-      { name: "Docker", hint: "Basic usage" },
+      { name: "Postman" },
+      { name: "Docker" },
       { name: "VS Code / Visual Studio" },
-    ],
-  },
-  {
-    title: "Game Dev",
-    icon: Gamepad2,
-    items: [
-      { name: "MonoGame (C#)" },
-      { name: "GameMaker" },
-      { name: "Sprite/Pixel Art" },
-      { name: "State Machines & AI" },
-    ],
-  },
-  {
-    title: "Systems / Architecture",
-    icon: Cpu,
-    items: [
-      { name: "Software Design (SE)", hint: "State pattern, factories" },
-      { name: "Auth & Sessions", hint: "Cognito, tokens" },
-      { name: "Caching & CDNs" },
-      { name: "Observability (basic)" },
+      { name: "Linux & Bash" },
     ],
   },
 ];

@@ -23,9 +23,12 @@ const work: WorkItem[] = [
     dates: "Summer 2025",
     location: "Cincinnati, OH",
     bullets: [
-      "Raised unit test coverage to ≥90% across Locations & Geospatial service repositories.",
-      "Added CI/CD pipeline checks to enforce ≥90% coverage on every PR and main-branch merge.",
-    ],
+  "Raised unit test coverage to >= 90% across Locations & Geospatial service repositories.",
+  "Added GitHub Actions coverage gates to enforce the 90% threshold on every PR and main-branch merge.",
+  "Updated Helm charts and deployed to Kubernetes to align with new ServiceNow assignment groups",
+  "Used Databricks notebooks to ingest data and load into PostgreSQL.",
+  "Used Postman collections to validate API endpoints."
+],
     logoSrc: krogerLogo,
     logoAlt: "Kroger logo",
     link: "https://www.thekrogerco.com/",
@@ -36,10 +39,10 @@ const work: WorkItem[] = [
     dates: "Summer 2024 (Full-time); Spring 2025 & Fall 2025 (Part-time)",
     location: "Fairfield, OH",
     bullets: [
-      "Developed scripts using Python, PowerShell, and C# for the IT Infrastructure team’s BMC TrueSight monitoring replacement.",
       "Fixed bugs and resolved issues on the new monitoring alert platform.",
-      "Standardized telemetry from multiple tools and delivered it via REST to the replacement application.",
-      "Integrated with Nagios, Dynatrace, and Splunk.",
+      "Developed scripts using Python, Powershell, and C\# for the IT Infrastructure developer team’s BMC TrueSight Monitoring software replacement project after BMC raised the price by 700\%.",
+      "Ingested data from various monitoring tools, formatted it into a uniform package, and called a REST API to send it to the new replacement application.",
+      "Integrated scripts to work with 3 infrastructure monitoring tools: Nagios, Dynatrace, and Splunk.",
     ],
     logoSrc: cincinnatiLogo,
     logoAlt: "Cincinnati Insurance Companies logo",
@@ -77,7 +80,7 @@ const work: WorkItem[] = [
     dates: "Summer 2022",
     location: "Milford, OH",
     bullets: [
-      "Built an app for tracking intern progress and reviews, used by the Strategic Student Program team for 70+ interns each rotation.",
+      "Built Mendix app for tracking intern progress and reviews, used by the Strategic Student Program team for 70+ interns each rotation.",
     ],
     logoSrc: siemensLogo,
     logoAlt: "Siemens logo",
