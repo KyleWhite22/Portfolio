@@ -97,9 +97,9 @@ export default function Hero() {
         <div className="flex flex-col justify-center text-center md:text-left">
           {/* Slightly smaller fonts + tighter leading on mobile */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">Kyle White</h1>
-          <p className="mt-2 md:mt-4 text-sm sm:text-base md:text-2xl text-zinc-200 leading-snug drop-shadow">
-            Full-stack Developer @ OSU
-          </p>
+<p className="mt-2 md:mt- -ml-1 sm:-ml-2 md:-ml-8 text-sm sm:text-base md:text-2xl text-zinc-200 leading-snug drop-shadow">
+  CS student @ Ohio State University
+</p>
 
           {/* Single-row bubble with CENTERED labels + tighter spacing */}
           <div className="mt-4 md:mt-8 flex justify-center md:justify-start">
