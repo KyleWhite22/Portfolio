@@ -1,6 +1,6 @@
 // src/pages/Projects.tsx
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 
 type Screenshot = { src: string; alt?: string; label?: string };
 
@@ -11,6 +11,7 @@ type ProjectCardProps = {
   screenshots?: Screenshot[];       // 1–3 images supported
   link?: string;                    // explicit link (card itself is NOT clickable)
   linkLabel?: string;               // optional display label for the URL
+  github?: string;                  // NEW: GitHub repo URL (shows icon)
   Logo?: React.ComponentType<{ className?: string }>;
   logoSrc?: string;
   logoAlt?: string;
@@ -25,6 +26,7 @@ function ProjectCard({
   screenshots,
   link,
   linkLabel,
+  github,             // NEW
   Logo,
   logoSrc,
   logoAlt,
@@ -39,7 +41,7 @@ function ProjectCard({
 
   return (
     <div className="group relative rounded-2xl border border-white/10 bg-white/5 p-5 md:p-6">
-      {/* Header: logo + title/badge (left) and link (right) */}
+      {/* Header: logo + title/badge (left) and links (right) */}
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2 min-w-0">
           {/* LOGO (no container) */}
@@ -65,18 +67,37 @@ function ProjectCard({
           </div>
         </div>
 
-        {link && (
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-sm md:text-base underline underline-offset-4 decoration-white/50 hover:decoration-white break-all"
-            aria-label={`Open ${linkLabel ?? link}`}
-          >
-            <span>{linkLabel ?? link.replace(/^https?:\/\//, "")}</span>
-            <ArrowUpRight className="h-4 w-4 opacity-80" />
-          </a>
-        )}
+        <div className="flex items-center gap-3">
+  {link && (
+    <div className="flex items-center gap-2">
+      <span className="text-xs md:text-sm text-zinc-400">Live site:</span>
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 text-sm md:text-base underline underline-offset-4 decoration-white/50 hover:decoration-white break-all"
+        aria-label={`Open ${linkLabel ?? link}`}
+        title={linkLabel ?? link}
+      >
+        <span>{linkLabel ?? link.replace(/^https?:\/\//, "")}</span>
+        <ArrowUpRight className="h-4 w-4 opacity-80" />
+      </a>
+    </div>
+  )}
+
+  {github && (
+    <a
+      href={github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center rounded-md p-1.5 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30"
+      aria-label={`Open GitHub repo for ${title}`}
+      title="GitHub Repository"
+    >
+      <Github className="h-5 w-5 text-white/85" />
+    </a>
+  )}
+</div>
       </div>
 
       {/* Tools pills */}
@@ -192,42 +213,45 @@ export default function Projects() {
         {/* One project per row */}
         <div className="space-y-5 md:space-y-6">
           <ProjectCard
-            title="GameGeniusAI"
-            description="A Steam-powered game recommender that blends store data with LLM-based reasoning."
-            tools={["React", "TypeScript", "Vite", "Tailwind", "OpenAI API", "Node/Express", "AWS Amplify", "Cognito"]}
-            Logo={GamepadIcon}
-            logoClassName="text-emerald-400"
-            link="https://game.kyle-white.com"
-            linkLabel="game.kyle-white.com"
-          />
-
-          <ProjectCard
             title="Pickleball Analysis"
-            description="Sports analytics dashboards and match insights with shareable visuals."
+            description="Users can view/create customized pickleball leagues with advanced metrics displayed"
             tools={[
-              "React", "TypeScript", "Tailwind", "Recharts",
-              "AWS (Lambda, API Gateway, DynamoDB, S3/CloudFront)", "GitHub Actions"
+              "React", "Vite", "TypeScript", "Tailwind", "Recharts",
+              "AWS (Lambda, API Gateway, DynamoDB, S3/CloudFront, Cognito)",
             ]}
             Logo={PaddleIcon}
             logoClassName="text-orange-400"
             link="https://pickle.kyle-white.com"
             linkLabel="pickle.kyle-white.com"
+            github="https://github.com/KyleWhite22/pickleball-analysis"
+          />
+
+          <ProjectCard
+            title="GameGeniusAI"
+            description="A Steam-powered game recommender ingests user's game data from Steam"
+            tools={["React", "JavaScript", "Vite", "OpenAI API", "Steam API", "MongoDB", "Node/Express"]}
+            Logo={GamepadIcon}
+            logoClassName="text-emerald-400"
+            link="https://game.kyle-white.com"
+            linkLabel="game.kyle-white.com"
+            github="https://github.com/KyleWhite22/GameGeniusAI"
           />
 
           <ProjectCard
             title="Degree Audit Parser"
-            description="Parses OSU degree audits and surfaces missing requirements with simple visuals."
-            tools={["React", "TypeScript", "Vite", "Tailwind", "Parsing", "Node"]}
+            description="Web app developed by my team at the 2024 OSU hackathon that parses an OSU student's degree audit and presents it in an easier to digest format"
+            tools={["React", "JavaScript", "Vite", "Node"]}
             Logo={DocumentIcon}
             logoClassName="text-rose-400"
             link="https://degreeauditparse.kyle-white.com"
             linkLabel="degreeauditparse.kyle-white.com"
+            github="https://github.com/KyleWhite22/degreeAuditParser"
           />
 
           {/* Zelda with 3 large screenshots */}
           <ProjectCard
-            title="Zelda MonoGame"
-            description="A 2D Zelda-like in C# MonoGame: state machines, input handling, collision, and sprite animation."
+            title="Legend of Zelda Recreation"
+            description="A 1-1 recreation of the first NES Legend of Zelda dungeon using the Monogame framework. In addition a custom endless enemy horde mode was added with a custom new boss: Dark Link."
             tools={["C#", "MonoGame", "State Machines", "Sprite Animation", "Collision"]}
             screenshots={[
               { src: "/assets/zelda-1.png", alt: "Zelda MonoGame — overworld", label: "1-1 first dungeon recreation" },
@@ -237,6 +261,7 @@ export default function Projects() {
             Logo={TriforceIcon}
             logoClassName="text-amber-300"
             badge="MonoGame"
+            github="https://github.com/KyleWhite22/LegendOfZelda"
           />
         </div>
       </div>

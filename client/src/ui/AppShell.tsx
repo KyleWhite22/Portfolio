@@ -56,7 +56,7 @@ export default function AppShell() {
             {NavLinkBtn("/#hero", "Top", "hero")}
             {NavLinkBtn("/#work", "Work", "work")}
             {NavLinkBtn("/#projects", "Projects", "projects")}
-            {NavLinkBtn("/#education", "Classes", "education")}
+            {NavLinkBtn("/#education", "Education", "education")}
             {NavLinkBtn("/#skills", "Skills", "skills")}
             <a
               href="https://pickle.kyle-white.com"
@@ -130,7 +130,7 @@ export default function AppShell() {
                 {NavLinkBtn("/#hero", "Top", "hero", () => setOpen(false))}
                 {NavLinkBtn("/#work", "Work", "work", () => setOpen(false))}
                 {NavLinkBtn("/#projects", "Projects", "projects", () => setOpen(false))}
-                {NavLinkBtn("/#education", "Classes", "education", () => setOpen(false))}
+                {NavLinkBtn("/#education", "Education", "education", () => setOpen(false))}
                 {NavLinkBtn("/#skills", "Skills", "skills", () => setOpen(false))}
                  <a
               href="https://pickle.kyle-white.com"
