@@ -144,9 +144,7 @@ export default function Skills() {
           <h2 id="skills-heading" className="text-3xl md:text-4xl font-bold">
             Skills
           </h2>
-          <p className="mt-1 text-sm text-zinc-400">
-            Core stack, tools, and areas I work in.
-          </p>
+        
         </header>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">

@@ -29,22 +29,27 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen bg-white text-black p-10 scroll-mt-24"
+      className="bg-zinc-900 text-white px-4 md:px-8 py-10 md:py-14 scroll-mt-24 border-t border-white/10"
     >
-      <h2 className="text-3xl font-bold mb-6">Projects</h2>
-      <div className="space-y-6">
-        <ProjectCard
-          title="GameGeniusAI"
-          description="A Steam-powered game recommender using AI."
-          link="https://game.kyle-white.com"
-        />
-        <ProjectCard
-          title="Pickleball Analysis"
-          description="A sports analytics app with AWS backend + Tailwind frontend."
-          link="https://pickle.kyle-white.com"
-        />
-        {/* Add more <ProjectCard /> as needed */}
+      <div className="mx-auto w-full max-w-5xl">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">Projects</h2>
+
+        {/* Centered content like Education */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <ProjectCard
+            title="GameGeniusAI"
+            description="A Steam-powered game recommender using AI."
+            link="https://game.kyle-white.com"
+          />
+          <ProjectCard
+            title="Pickleball Analysis"
+            description="A sports analytics app with AWS backend + Tailwind frontend."
+            link="https://pickle.kyle-white.com"
+          />
+          {/* Add more <ProjectCard /> as needed */}
+        </div>
       </div>
     </section>
   );
 }
+
