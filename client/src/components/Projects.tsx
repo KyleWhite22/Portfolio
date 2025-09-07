@@ -1,27 +1,182 @@
+// src/pages/Projects.tsx
 import React from "react";
+import { ArrowUpRight } from "lucide-react";
+
+type Screenshot = { src: string; alt?: string; label?: string };
 
 type ProjectCardProps = {
   title: string;
   description: string;
-  link?: string; // optional project link
+  tools?: string[];                 // pills row
+  screenshots?: Screenshot[];       // 1–3 images supported
+  link?: string;                    // explicit link (card itself is NOT clickable)
+  linkLabel?: string;               // optional display label for the URL
+  Logo?: React.ComponentType<{ className?: string }>;
+  logoSrc?: string;
+  logoAlt?: string;
+  logoClassName?: string;           // e.g., "text-emerald-400"
+  badge?: string;                   // e.g., "MonoGame", "Private"
 };
 
-function ProjectCard({ title, description, link }: ProjectCardProps) {
+function ProjectCard({
+  title,
+  description,
+  tools,
+  screenshots,
+  link,
+  linkLabel,
+  Logo,
+  logoSrc,
+  logoAlt,
+  logoClassName,
+  badge,
+}: ProjectCardProps) {
+  const count = Math.min(screenshots?.length ?? 0, 3);
+  const gridCols =
+    count === 3 ? "sm:grid-cols-3"
+    : count === 2 ? "sm:grid-cols-2"
+    : "sm:grid-cols-1";
+
   return (
-    <div className="p-6 bg-zinc-100 rounded-xl shadow hover:shadow-lg transition">
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-zinc-700">{description}</p>
-      {link && (
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-3 inline-block text-blue-600 hover:underline font-medium"
-        >
-          View Project →
-        </a>
+    <div className="group relative rounded-2xl border border-white/10 bg-white/5 p-5 md:p-6">
+      {/* Header: logo + title/badge (left) and link (right) */}
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          {/* LOGO (no container) */}
+          {Logo ? (
+            <Logo className={`h-8 w-8 ${logoClassName ?? "text-white/80"}`} />
+          ) : logoSrc ? (
+            <img
+              src={logoSrc}
+              alt={logoAlt ?? `${title} logo`}
+              className="h-8 w-8 object-contain"
+            />
+          ) : null}
+
+          <div className="flex items-center gap-2 min-w-0">
+            <h3 className="text-lg md:text-xl font-semibold leading-tight truncate">
+              {title}
+            </h3>
+            {badge && (
+              <span className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-xs text-white/80">
+                {badge}
+              </span>
+            )}
+          </div>
+        </div>
+
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-sm md:text-base underline underline-offset-4 decoration-white/50 hover:decoration-white break-all"
+            aria-label={`Open ${linkLabel ?? link}`}
+          >
+            <span>{linkLabel ?? link.replace(/^https?:\/\//, "")}</span>
+            <ArrowUpRight className="h-4 w-4 opacity-80" />
+          </a>
+        )}
+      </div>
+
+      {/* Tools pills */}
+      {tools?.length ? (
+        <ul className="mt-2 flex flex-wrap gap-2">
+          {tools.map((t) => (
+            <li key={t}>
+              <span className="inline-block rounded-full bg-white/10 px-2.5 py-1 text-xs md:text-sm text-white/80">
+                {t}
+              </span>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+
+      {/* Description */}
+      <p className="mt-2 text-sm md:text-base text-zinc-300">{description}</p>
+
+      {/* Screenshots (1–3), with optional centered labels */}
+      {count > 0 && (
+        <div className={`mt-4 grid grid-cols-1 ${gridCols} gap-3 md:gap-4`}>
+          {screenshots!.slice(0, 3).map((img, i) => (
+            <figure key={`${title}-ss-${i}`} className="w-full">
+              <img
+                src={img.src}
+                alt={img.alt ?? `${title} screenshot ${i + 1}`}
+                className="w-full h-56 md:h-64 lg:h-72 object-cover rounded-lg border border-white/10 bg-black/20"
+                loading="lazy"
+              />
+              {img.label && (
+                <figcaption className="mt-1 text-[11px] md:text-xs leading-tight text-white/70 text-center">
+                  {img.label}
+                </figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
       )}
     </div>
+  );
+}
+
+/* Inline outline logos (use your own or keep these) */
+function PaddleIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} xmlns="http://www.w3.org/2000/svg" aria-label="Pickleball">
+      <g transform="rotate(-20 28 28)">
+        <rect x="12" y="8" width="32" height="28" rx="12" ry="12" fill="none" stroke="currentColor" strokeWidth="3" />
+        <rect x="25" y="34" width="6" height="16" rx="3" fill="currentColor" />
+        <rect x="23" y="32" width="10" height="4" rx="2" fill="currentColor" />
+      </g>
+      <g>
+        <circle cx="47" cy="18" r="7" fill="none" stroke="currentColor" strokeWidth="3" />
+        <circle cx="47" cy="18" r="1.4" fill="currentColor" />
+        <circle cx="43.8" cy="18" r="1.2" fill="currentColor" />
+        <circle cx="50.2" cy="18" r="1.2" fill="currentColor" />
+        <circle cx="47" cy="15" r="1.2" fill="currentColor" />
+        <circle cx="47" cy="21" r="1.2" fill="currentColor" />
+      </g>
+    </svg>
+  );
+}
+
+function GamepadIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} xmlns="http://www.w3.org/2000/svg" aria-label="GameGeniusAI">
+      <g transform="translate(-2,-8)">
+        <path
+          d="M16 28c-6 0-10 5-10 12s4 12 10 12c2.5 0 4.5-1.2 6-3l2-2c1-1 2.3-1.5 3.7-1.5h8.6c1.4 0 2.7.5 3.7 1.5l2 2c1.5 1.8 3.5 3 6 3 6 0 10-5 10-12s-4-12-10-12H16Z"
+          fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round"
+        />
+      </g>
+    </svg>
+  );
+}
+
+function DocumentIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} xmlns="http://www.w3.org/2000/svg" aria-label="Degree Audit Parser">
+      <rect x="14" y="10" width="36" height="48" rx="6" fill="none" stroke="currentColor" strokeWidth="3" />
+      <g stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+        <line x1="20" y1="24" x2="44" y2="24" />
+        <line x1="20" y1="32" x2="44" y2="32" />
+        <line x1="20" y1="40" x2="38" y2="40" />
+        <line x1="20" y1="48" x2="32" y2="48" />
+      </g>
+    </svg>
+  );
+}
+
+/* Zelda MonoGame outline logo (Triforce) */
+function TriforceIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} xmlns="http://www.w3.org/2000/svg" aria-label="Zelda MonoGame">
+      <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round">
+        <path d="M32 14 L22 33 H42 Z" />
+        <path d="M22 36 L12 54 H32 Z" />
+        <path d="M42 36 L32 54 H52 Z" />
+      </g>
+    </svg>
   );
 }
 
@@ -34,22 +189,57 @@ export default function Projects() {
       <div className="mx-auto w-full max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">Projects</h2>
 
-        {/* Centered content like Education */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {/* One project per row */}
+        <div className="space-y-5 md:space-y-6">
           <ProjectCard
             title="GameGeniusAI"
-            description="A Steam-powered game recommender using AI."
+            description="A Steam-powered game recommender that blends store data with LLM-based reasoning."
+            tools={["React", "TypeScript", "Vite", "Tailwind", "OpenAI API", "Node/Express", "AWS Amplify", "Cognito"]}
+            Logo={GamepadIcon}
+            logoClassName="text-emerald-400"
             link="https://game.kyle-white.com"
+            linkLabel="game.kyle-white.com"
           />
+
           <ProjectCard
             title="Pickleball Analysis"
-            description="A sports analytics app with AWS backend + Tailwind frontend."
+            description="Sports analytics dashboards and match insights with shareable visuals."
+            tools={[
+              "React", "TypeScript", "Tailwind", "Recharts",
+              "AWS (Lambda, API Gateway, DynamoDB, S3/CloudFront)", "GitHub Actions"
+            ]}
+            Logo={PaddleIcon}
+            logoClassName="text-orange-400"
             link="https://pickle.kyle-white.com"
+            linkLabel="pickle.kyle-white.com"
           />
-          {/* Add more <ProjectCard /> as needed */}
+
+          <ProjectCard
+            title="Degree Audit Parser"
+            description="Parses OSU degree audits and surfaces missing requirements with simple visuals."
+            tools={["React", "TypeScript", "Vite", "Tailwind", "Parsing", "Node"]}
+            Logo={DocumentIcon}
+            logoClassName="text-rose-400"
+            link="https://degreeauditparse.kyle-white.com"
+            linkLabel="degreeauditparse.kyle-white.com"
+          />
+
+          {/* Zelda with 3 large screenshots */}
+          <ProjectCard
+            title="Zelda MonoGame"
+            description="A 2D Zelda-like in C# MonoGame: state machines, input handling, collision, and sprite animation."
+            tools={["C#", "MonoGame", "State Machines", "Sprite Animation", "Collision"]}
+            screenshots={[
+              { src: "/assets/zelda-1.png", alt: "Zelda MonoGame — overworld", label: "1-1 first dungeon recreation" },
+              { src: "/assets/zelda-2.png", alt: "Zelda MonoGame — dungeon room", label: "Custom endless enemy horde mode" },
+              { src: "/assets/zelda-3.png", alt: "Zelda MonoGame — boss fight", label: "Custom Dark Link boss fight" },
+            ]}
+            Logo={TriforceIcon}
+            logoClassName="text-amber-300"
+            badge="MonoGame"
+          />
         </div>
       </div>
     </section>
   );
 }
-

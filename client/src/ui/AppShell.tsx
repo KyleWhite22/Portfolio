@@ -54,8 +54,8 @@ export default function AppShell() {
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-2 lg:gap-6">
             {NavLinkBtn("/#hero", "Top", "hero")}
-            {NavLinkBtn("/#projects", "Projects", "projects")}
             {NavLinkBtn("/#work", "Work", "work")}
+            {NavLinkBtn("/#projects", "Projects", "projects")}
             {NavLinkBtn("/#education", "Classes", "education")}
             {NavLinkBtn("/#skills", "Skills", "skills")}
             <a
@@ -112,8 +112,8 @@ export default function AppShell() {
                 </div>
 
                 {NavLinkBtn("/#hero", "Top", "hero", () => setOpen(false))}
-                {NavLinkBtn("/#projects", "Projects", "projects", () => setOpen(false))}
                 {NavLinkBtn("/#work", "Work", "work", () => setOpen(false))}
+                {NavLinkBtn("/#projects", "Projects", "projects", () => setOpen(false))}
                 {NavLinkBtn("/#education", "Classes", "education", () => setOpen(false))}
                 {NavLinkBtn("/#skills", "Skills", "skills", () => setOpen(false))}
                 <a
