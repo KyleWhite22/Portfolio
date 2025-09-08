@@ -216,8 +216,8 @@ export default function Hero() {
                   Résumé
                 </span>
                 <a
-                  href="/resume/Kyle-White-Resume.pdf"
-                  download="Kyle-White-Resume.pdf"
+                  href="/resume/KyleWhiteResume.pdf"
+                  download="KyleWhiteResume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-transform 
