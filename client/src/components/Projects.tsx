@@ -214,7 +214,8 @@ export default function Projects() {
         <div className="space-y-5 md:space-y-6">
           <ProjectCard
             title="Pickleball Analysis"
-            description="Users can view/create customized pickleball leagues with advanced metrics displayed"
+            description="Web app that computes and visualizes metrics from logged matches (point differential, streaks, standings). Implemented using secure auth and league management with AWS Cognito; built REST endpoints via API Gateway and
+ Lambda backed by DynamoDB"
             tools={[
               "React", "Vite", "TypeScript", "Tailwind", "Recharts",
               "AWS (Lambda, API Gateway, DynamoDB, S3/CloudFront, Cognito)",
@@ -228,7 +229,8 @@ export default function Projects() {
 
           <ProjectCard
             title="GameGeniusAI"
-            description="A Steam-powered game recommender ingests user's game data from Steam"
+            description="Full-stack web app that ingests a user's library via the Steam Web API and generates similar-game
+ suggestions using OpenAI API. Designed REST endpoints in Express and persisted user/game metadata in MongoDB. Deployed on AWS EC2 behind Nginx (reverse proxy, SSL/TLS) with frontend CI/CD via GitHub Actions"
             tools={["React", "JavaScript", "Vite", "OpenAI API", "Steam API", "MongoDB", "Node/Express"]}
             Logo={GamepadIcon}
             logoClassName="text-emerald-400"
@@ -239,7 +241,7 @@ export default function Projects() {
 
           <ProjectCard
             title="Degree Audit Parser"
-            description="Web app developed by my team at the 2024 OSU hackathon that parses an OSU student's degree audit and presents it in an easier to digest format"
+            description="Web app developed during OSU Hackathon to parse degree-audit HTML and visualize progress with an interactive UI"
             tools={["React", "JavaScript", "Vite", "Node"]}
             Logo={DocumentIcon}
             logoClassName="text-rose-400"
@@ -251,7 +253,7 @@ export default function Projects() {
           {/* Zelda with 3 large screenshots */}
           <ProjectCard
             title="Legend of Zelda Recreation"
-            description="A 1-1 recreation of the first NES Legend of Zelda dungeon using the Monogame framework. In addition a custom endless enemy horde mode was added with a custom new boss: Dark Link."
+            description="A 1-1 recreation of the first NES Legend of Zelda dungeon using the Monogame framework developed by my 6-person Agile development team. In addition a custom endless enemy horde mode was added with a custom new boss: Dark Link."
             tools={["C#", "MonoGame", "State Machines", "Sprite Animation", "Collision"]}
             screenshots={[
               { src: "/assets/zelda-1.png", alt: "Zelda MonoGame — overworld", label: "1-1 first dungeon recreation" },
