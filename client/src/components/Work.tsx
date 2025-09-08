@@ -23,11 +23,10 @@ const work: WorkItem[] = [
     dates: "Summer 2025",
     location: "Cincinnati, OH",
     bullets: [
-  "Raised unit test coverage to >= 90% across Locations & Geospatial service repositories.",
-  "Added GitHub Actions coverage gates to enforce the 90% threshold on every PR and main-branch merge.",
-  "Updated Helm charts and deployed to Kubernetes to align with new ServiceNow assignment groups",
-  "Used Databricks notebooks to ingest data and load into PostgreSQL.",
-  "Used Postman collections to validate API endpoints."
+  "Increased unit test coverage from 60% to over 90% across all 6 Locations and Geospatial service repositories",
+  "Implemented CI/CD coverage gates in GitHub Actions to block merges below the 90% test coverage threshold",
+  "Updated Helm charts, deployed to Kubernetes, and validated REST APIs with Postman collections",
+  "Participated in Scrum ceremonies (daily stand-ups, sprint planning, backlog refinement, retrospectives)"
 ],
     logoSrc: krogerLogo,
     logoAlt: "Kroger logo",
@@ -39,10 +38,9 @@ const work: WorkItem[] = [
     dates: "Summer 2024 (Full-time); Spring 2025 & Fall 2025 (Part-time)",
     location: "Fairfield, OH",
     bullets: [
-      "Fixed bugs and resolved issues on the new monitoring alert platform.",
-      "Developed scripts using Python, Powershell, and C\# for the IT Infrastructure developer team’s BMC TrueSight Monitoring software replacement project after BMC raised the price by 700\%.",
-      "Ingested data from various monitoring tools, formatted it into a uniform package, and called a REST API to send it to the new replacement application.",
-      "Integrated scripts to work with 3 infrastructure monitoring tools: Nagios, Dynatrace, and Splunk.",
+      "Maintained and debugged Cincinnati Insurance's in-house monitoring/alerting platform",
+      "Built automation scripts in Python, PowerShell, and C# to migrate off BMC TrueSight after a 700% price increase",
+      "Engineered ETL pipelines to ingest and standardize events/metrics from Nagios, Dynatrace, and Splunk into a unified schema, and integrated with REST APIs to populate the replacement platform",
     ],
     logoSrc: cincinnatiLogo,
     logoAlt: "Cincinnati Insurance Companies logo",
@@ -54,7 +52,7 @@ const work: WorkItem[] = [
     dates: "Fall 2024",
     location: "Columbus, OH",
     bullets: [
-      "Held office hous to assist students with homework and prepare for exams."
+      "Led weekly office hours for 30+ students to explain Big-O/asymptotic analysis, recursion, and proof techniques"
     ],
     logoSrc: osuLogo,
     logoAlt: "Ohio State logo",
@@ -67,8 +65,7 @@ const work: WorkItem[] = [
     dates: "Summer 2023",
     location: "Milford, OH",
     bullets: [
-      "Sole developer for the Strategic Student Program social app (100+ users), implementing requested features and bug fixes in Mendix.",
-      "Optimized the Mendix app for smooth performance on desktop and mobile.",
+      "Optimized performance, implemented features and fixed bugs for Siemens intern social media app (100+ users)",
     ],
     logoSrc: siemensLogo,
     logoAlt: "Siemens logo",
@@ -80,7 +77,7 @@ const work: WorkItem[] = [
     dates: "Summer 2022",
     location: "Milford, OH",
     bullets: [
-      "Built Mendix app for tracking intern progress and reviews, used by the Strategic Student Program team for 70+ interns each rotation.",
+      "Built app for tracking intern progress and reviews, used by the intern program team for 70+ interns each rotation",
     ],
     logoSrc: siemensLogo,
     logoAlt: "Siemens logo",
