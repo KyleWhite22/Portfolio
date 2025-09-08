@@ -35,32 +35,20 @@ const groups: SkillGroup[] = [
       { name: "C#" },
       { name: "C/C++" },
       { name: "Go" },
-      { name: "PowerShell" },
-      { name: "HTML" },
-      { name: "CSS" },
-      { name: "MATLAB" },
-      { name: "x86-64 assembly" },
     ],
   },
   {
-    title: "Frontend",
-    icon: MonitorSmartphone,
+    title: "Frameworks/Tools",
+    icon: Wrench,
     items: [
       { name: "React" },
-      { name: "Vite" },
+      { name: "Node.js/Express" },
       { name: "Tailwind CSS" },
-      { name: "Recharts", hint: "Data viz" },
-    ],
-  },
-  {
-    title: "Backend & APIs",
-    icon: Server,
-    items: [
-      { name: "Node.js" },
-      { name: "Express" },
-      { name: "REST, JSON" },
-      { name: "OpenAI API" },
-      { name: "Steam Web API" },
+      { name: "Vite"},
+      { name: "Docker"},
+      { name: "Git"},
+      { name: "GitHub"},
+      { name: "CI/CD (GitHub Actions)"}
     ],
   },
   {
@@ -84,18 +72,7 @@ const groups: SkillGroup[] = [
   {
     title: "Databases",
     icon: Database,
-    items: [{name : "SQL (PostgreSQL)"}, { name: "MongoDB" }, { name: "DynamoDB" }],
-  },
-  {
-    title: "Tools",
-    icon: Wrench,
-    items: [
-      { name: "Git & GitHub" },
-      { name: "Postman" },
-      { name: "Docker" },
-      { name: "VS Code / Visual Studio" },
-      { name: "Linux & Bash" },
-    ],
+    items: [{name : "SQL (PostgreSQL)"}, { name: "MongoDB" }, { name: "DynamoDB" },  {name: " SQL Server (T-SQL, SSMS)"}],
   },
 ];
 
