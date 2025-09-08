@@ -1,13 +1,77 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/kyleLogo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kyle's Website</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- 1) Honest, keyworded title + description -->
+    <title>Kyle White — Ohio State CSE · Software Engineer · Portfolio</title>
+    <meta name="description" content="Kyle White — OSU CSE student and software engineer. Projects in React, Vite, AWS, TypeScript, MonoGame, and more." />
+
+    <!-- 2) Canonical URL -->
+    <link rel="canonical" href="https://kyle-white.com/" />
+
+    <!-- 3) Open Graph (social previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kyle-white.com/" />
+    <meta property="og:site_name" content="Kyle White" />
+    <meta property="og:title" content="Kyle White — Ohio State CSE · Software Engineer" />
+    <meta property="og:description" content="Projects, case studies, resume, and contact." />
+    <meta property="og:image" content="https://kyle-white.com/og-card.jpg" />
+
+    <!-- 4) Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kyle White — Ohio State CSE · Software Engineer" />
+    <meta name="twitter:description" content="Projects, case studies, resume, and contact." />
+    <meta name="twitter:image" content="https://kyle-white.com/og-card.jpg" />
+
+    <!-- 5) Site Name structured data (helps Google use your preferred sitename) -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebSite",
+      "name":"Kyle White",
+      "url":"https://kyle-white.com/"
+    }
+    </script>
+
+    <!-- 6) ProfilePage structured data (ties your name + profiles together) -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"ProfilePage",
+      "about":{
+        "@type":"Person",
+        "name":"Kyle White",
+        "jobTitle":"Software Engineer & OSU CSE Student",
+        "alumniOf":{"@type":"CollegeOrUniversity","name":"Ohio State University"},
+        "affiliation":{"@type":"CollegeOrUniversity","name":"Ohio State University"},
+        "url":"https://kyle-white.com/",
+        "sameAs":[
+          "https://github.com/kylewhite22",
+          "https://www.linkedin.com/in/kylewhite22",
+        ]
+      }
+    }
+    </script>
+
+    <!-- 7) Performance: self-host fonts + swap; preload your main font if small -->
+    <!-- example if you self-host /fonts/inter-var.woff2 -->
+    <link rel="preload" as="font" href="/fonts/inter-var.woff2" type="font/woff2" crossorigin>
+    <style>
+      @font-face {
+        font-family: "InterVar";
+        src: url("/fonts/inter-var.woff2") format("woff2");
+        font-display: swap;
+      }
+      :root { font-family: InterVar, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+

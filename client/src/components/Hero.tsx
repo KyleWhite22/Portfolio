@@ -90,6 +90,7 @@ export default function Hero() {
             alt="Kyle White"
             // Smaller on mobile, larger on md+; tight border to save space
             className="w-[clamp(150px,36vw,340px)] rounded-xl border-2 md:border-4 border-white shadow-xl shadow-black/40"
+            loading="lazy"
           />
         </div>
 
