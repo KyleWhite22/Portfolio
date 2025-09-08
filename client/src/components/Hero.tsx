@@ -98,7 +98,7 @@ export default function Hero() {
           {/* Slightly smaller fonts + tighter leading on mobile */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">Kyle White</h1>
 <p className="mt-2 md:mt- -ml-1 sm:-ml-2 md:-ml-8 text-sm sm:text-base md:text-2xl text-zinc-200 leading-snug drop-shadow">
-  CS student @ Ohio State University
+  CSE student @ Ohio State University
 </p>
 
           {/* Single-row bubble with CENTERED labels + tighter spacing */}
