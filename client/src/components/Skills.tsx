@@ -34,6 +34,7 @@ const groups: SkillGroup[] = [
       { name: "Java" },
       { name: "C#" },
       { name: "C/C++" },
+      { name: "goLang" },
       { name: "PowerShell" },
       { name: "HTML" },
       { name: "CSS" },
