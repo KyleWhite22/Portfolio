@@ -67,6 +67,22 @@ function DocumentIcon({ className }: { className?: string }) {
   );
 }
 
+// NEW: Download icon
+function DownloadIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12 3v10m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export default function Hero() {
   return (
     <section
@@ -98,16 +114,17 @@ export default function Hero() {
         <div className="flex flex-col justify-center text-center md:text-left">
           {/* Slightly smaller fonts + tighter leading on mobile */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">Kyle White</h1>
-<p className="mt-2 md:mt- -ml-1 sm:-ml-2 md:-ml-8 text-sm sm:text-base md:text-2xl text-zinc-200 leading-snug drop-shadow">
-  CSE student @ Ohio State University
-</p>
+          <p className="mt-2 md:mt- -ml-1 sm:-ml-2 md:-ml-8 text-sm sm:text-base md:text-2xl text-zinc-200 leading-snug drop-shadow">
+            CSE student @ Ohio State University
+          </p>
 
           {/* Single-row bubble with CENTERED labels + tighter spacing */}
-          <div className="mt-4 md:mt-8 flex justify-center md:justify-start">
+          {/* Single-row bubble with CENTERED labels + tighter spacing */}
+          <div className="mt-4 md:mt-8 flex justify-center md:justify-start md:-ml-8">
             <div
-              className="w-fit mx-auto md:mx-0 flex items-start gap-3 md:gap-4 rounded-2xl
-                  bg-black/70 border border-white/10 px-3 py-2 md:px-4 md:py-3 shadow-lg shadow-black/30
-                  backdrop-blur-sm overflow-x-auto"
+              className="w-fit mx-auto md:mx-0 flex items-center gap-3 md:gap-2 rounded-2xl
+      bg-black/70 border border-white/10 px-3 py-2 md:px-4 md:py-3 shadow-lg shadow-black/30
+      backdrop-blur-sm overflow-x-auto"
             >
               {/* Socials group */}
               <div className="flex flex-col items-center">
@@ -137,7 +154,7 @@ export default function Hero() {
                   </a>
                   <a
                     href="mailto:kewhite900@gmail.com"
-                    className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white/30 rounded-md"
+                    className="hover:text-white transition-colors  focus:outline-none focus:ring-2 focus:ring-white/30 rounded-md"
                     aria-label="Email"
                     title="Email"
                   >
@@ -146,7 +163,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Slim vertical divider */}
+              {/* Divider */}
               <div className="self-stretch mx-2 w-px bg-white/10" aria-hidden="true" />
 
               {/* Projects group */}
@@ -189,9 +206,34 @@ export default function Hero() {
                   </a>
                 </div>
               </div>
+
+              {/* Divider */}
+              <div className="self-stretch mx-2 w-px bg-white/10" aria-hidden="true" />
+
+              {/* Resume group */}
+              <div className="flex flex-col items-center">
+                <span className="mb-0.5 md:mb-1 text-[9px] md:text-[10px] uppercase tracking-wider text-zinc-400 text-center">
+                  Résumé
+                </span>
+                <a
+                  href="/resume/Kyle-White-Resume.pdf"
+                  download="Kyle-White-Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 transition-transform 
+               focus:outline-none focus:ring-2 focus:ring-blue-400/40 rounded-md"
+                  aria-label="Download Résumé"
+                  title="Résumé"
+                >
+                  <DownloadIcon className="h-6 w-6 md:h-7 md:w-7" />
+                </a>
+              </div>
             </div>
           </div>
+
+
         </div>
+
       </div>
 
       {/* Hide extra decoration on small screens so it never steals vertical space/overlaps content */}
