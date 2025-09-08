@@ -213,6 +213,17 @@ export default function Projects() {
         {/* One project per row */}
         <div className="space-y-5 md:space-y-6">
           <ProjectCard
+            title="GameGeniusAI"
+            description="Full-stack web app that ingests a user's library via the Steam Web API and generates similar-game
+ suggestions using OpenAI API. Designed REST endpoints in Express and persisted user/game metadata in MongoDB. Deployed on AWS EC2 behind Nginx (reverse proxy, SSL/TLS) with frontend CI/CD via GitHub Actions"
+            tools={["React", "JavaScript", "Vite", "OpenAI API", "Steam API", "MongoDB", "Node/Express"]}
+            Logo={GamepadIcon}
+            logoClassName="text-emerald-400"
+            link="https://game.kyle-white.com"
+            linkLabel="game.kyle-white.com"
+            github="https://github.com/KyleWhite22/GameGeniusAI"
+          />
+          <ProjectCard
             title="Pickleball Analysis"
             description="Web app that computes and visualizes metrics from logged matches (point differential, streaks, standings). Implemented using secure auth and league management with AWS Cognito; built REST endpoints via API Gateway and
  Lambda backed by DynamoDB"
@@ -225,18 +236,6 @@ export default function Projects() {
             link="https://pickle.kyle-white.com"
             linkLabel="pickle.kyle-white.com"
             github="https://github.com/KyleWhite22/pickleball-analysis"
-          />
-
-          <ProjectCard
-            title="GameGeniusAI"
-            description="Full-stack web app that ingests a user's library via the Steam Web API and generates similar-game
- suggestions using OpenAI API. Designed REST endpoints in Express and persisted user/game metadata in MongoDB. Deployed on AWS EC2 behind Nginx (reverse proxy, SSL/TLS) with frontend CI/CD via GitHub Actions"
-            tools={["React", "JavaScript", "Vite", "OpenAI API", "Steam API", "MongoDB", "Node/Express"]}
-            Logo={GamepadIcon}
-            logoClassName="text-emerald-400"
-            link="https://game.kyle-white.com"
-            linkLabel="game.kyle-white.com"
-            github="https://github.com/KyleWhite22/GameGeniusAI"
           />
 
           <ProjectCard

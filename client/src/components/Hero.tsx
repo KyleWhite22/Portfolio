@@ -172,16 +172,6 @@ export default function Hero() {
                   Live Projects
                 </span>
                 <div className="flex items-center gap-3 md:gap-4">
-                  <a
-                    href="https://pickle.kyle-white.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:scale-110 transition-transform text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/40 rounded-md"
-                    aria-label="Pickleball Analytics"
-                    title="Pickleball Analytics"
-                  >
-                    <PaddleIcon className="h-6 w-6 md:h-7 md:w-7" />
-                  </a>
 
                   <a
                     href="https://game.kyle-white.com"
@@ -192,6 +182,17 @@ export default function Hero() {
                     title="GameGeniusAI"
                   >
                     <GamepadIcon className="h-6 w-6 md:h-7 md:w-7 -translate-y-[1px]" />
+                  </a>
+
+                  <a
+                    href="https://pickle.kyle-white.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:scale-110 transition-transform text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/40 rounded-md"
+                    aria-label="Pickleball Analytics"
+                    title="Pickleball Analytics"
+                  >
+                    <PaddleIcon className="h-6 w-6 md:h-7 md:w-7" />
                   </a>
 
                   <a

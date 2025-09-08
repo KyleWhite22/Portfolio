@@ -58,6 +58,14 @@ export default function AppShell() {
             {NavLinkBtn("/#projects", "Projects", "projects")}
             {NavLinkBtn("/#education", "Education", "education")}
             {NavLinkBtn("/#skills", "Skills", "skills")}
+              <a
+              href="https://game.kyle-white.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg px-3 py-2 font-semibold hover:bg-white/10"
+            >
+              GameGeniusAI
+            </a>
             <a
               href="https://pickle.kyle-white.com"
               target="_blank"
@@ -65,14 +73,6 @@ export default function AppShell() {
               className="rounded-lg px-3 py-2 font-semibold hover:bg-white/10"
             >
               PickleballAnalysis
-            </a>
-            <a
-              href="https://game.kyle-white.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg px-3 py-2 font-semibold hover:bg-white/10"
-            >
-              GameGeniusAI
             </a>
             <a
               href="https://degreeauditparse.kyle-white.com"
@@ -132,6 +132,14 @@ export default function AppShell() {
                 {NavLinkBtn("/#projects", "Projects", "projects", () => setOpen(false))}
                 {NavLinkBtn("/#education", "Education", "education", () => setOpen(false))}
                 {NavLinkBtn("/#skills", "Skills", "skills", () => setOpen(false))}
+                  <a
+              href="https://game.kyle-white.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg px-3 py-2 font-semibold hover:bg-white/10"
+            >
+              GameGeniusAI
+            </a>
                  <a
               href="https://pickle.kyle-white.com"
               target="_blank"
@@ -139,14 +147,6 @@ export default function AppShell() {
               className="rounded-lg px-3 py-2 font-semibold hover:bg-white/10"
             >
               PickleballAnalysis
-            </a>
-            <a
-              href="https://game.kyle-white.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg px-3 py-2 font-semibold hover:bg-white/10"
-            >
-              GameGeniusAI
             </a>
             <a
               href="https://degreeauditparse.kyle-white.com"
