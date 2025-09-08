@@ -260,7 +260,6 @@ export default function Projects() {
             ]}
             Logo={TriforceIcon}
             logoClassName="text-amber-300"
-            badge="MonoGame"
             github="https://github.com/KyleWhite22/LegendOfZelda"
           />
         </div>
