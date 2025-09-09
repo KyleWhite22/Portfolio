@@ -48,7 +48,8 @@ const groups: SkillGroup[] = [
       { name: "Docker"},
       { name: "Git"},
       { name: "GitHub"},
-      { name: "CI/CD (GitHub Actions)"}
+      { name: "CI/CD (GitHub Actions)"},
+      { name: "Linux/Bash"}
     ],
   },
   {
