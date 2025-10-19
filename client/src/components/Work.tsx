@@ -17,7 +17,22 @@ type WorkItem = {
 };
 
 const work: WorkItem[] = [
-  {
+   {
+    company: "Cincinnati Insurance Companies",
+    role: "Software Developer Intern",
+    dates: "Summer 2024 (Full-time); Spring 2025 & Fall 2025 (Part-time)",
+    location: "Fairfield, OH",
+    bullets: [
+      "Built automation scripts in Python, PowerShell, and C# to migrate off BMC TrueSight after a 700% price increase.",
+      "Engineered ETL pipelines to ingest and standardize events/metrics from Nagios, Dynatrace, and Splunk into a unified schema, integrating with REST APIs to populate the replacement platform",
+      "Debugged and optimized SQL queries using SQL Server Management Studio to improve monitoring data accuracy",
+      "Performed software maintenance and debugging on the in-house monitoring/alerting platform to improve user experience",
+    ],
+    logoSrc: cincinnatiLogo,
+    logoAlt: "Cincinnati Insurance Companies logo",
+    link: "https://www.cinfin.com/",
+  },
+   {
     company: "Kroger",
     role: "Software Developer Intern — Locations & Geospatial",
     dates: "Summer 2025",
@@ -33,23 +48,9 @@ const work: WorkItem[] = [
     link: "https://www.thekrogerco.com/",
   },
   {
-    company: "Cincinnati Insurance Companies",
-    role: "IT Infrastructure Developer Intern",
-    dates: "Summer 2024 (Full-time); Spring 2025 & Fall 2025 (Part-time)",
-    location: "Fairfield, OH",
-    bullets: [
-      "Maintained and debugged Cincinnati Insurance's in-house monitoring/alerting platform",
-      "Built automation scripts in Python, PowerShell, and C# to migrate off BMC TrueSight after a 700% price increase",
-      "Engineered ETL pipelines to ingest and standardize events/metrics from Nagios, Dynatrace, and Splunk into a unified schema, and integrated with REST APIs to populate the replacement platform",
-    ],
-    logoSrc: cincinnatiLogo,
-    logoAlt: "Cincinnati Insurance Companies logo",
-    link: "https://www.cinfin.com/",
-  },
-  {
     company: "The Ohio State University",
     role: "Teaching Assistant — Foundations 1: Discrete Structures",
-    dates: "Fall 2024",
+    dates: "Fall 2024, Fall 2025",
     location: "Columbus, OH",
     bullets: [
       "Led weekly office hours for 30+ students to explain Big-O/asymptotic analysis, recursion, and proof techniques"
