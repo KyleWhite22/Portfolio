@@ -187,6 +187,21 @@ function DocumentIcon({ className }: { className?: string }) {
     </svg>
   );
 }
+function PoolWavesIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Pool Waves"
+    >
+      <g stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round">
+        <path d="M8 32c4 4 8 4 12 0s8-4 12 0 8 4 12 0 8-4 12 0" />
+        <path d="M8 44c4 4 8 4 12 0s8-4 12 0 8 4 12 0 8-4 12 0" />
+      </g>
+    </svg>
+  );
+}
 
 /* Zelda MonoGame outline logo (Triforce) */
 function TriforceIcon({ className }: { className?: string }) {
@@ -212,6 +227,17 @@ export default function Projects() {
 
         {/* One project per row */}
         <div className="space-y-5 md:space-y-6">
+            <ProjectCard
+            title="Lifeguard Rotation Manager"
+            description="Developed and deployed a full-stack web app for the Hilliard Family Aquatic Center to manage rotations, breaks, and
+ queues for over 50 lifeguards, with dynamic scheduling logic involving randomized guard assignments and age restrictions. Designed AWS architecture using API Gateway, Lambda, DynamoDB, S3, and CloudFront with CI/CD via GitHub Actions."
+            tools={["React", "JavaScript", "Vite", "OpenAI API", "Steam API", "MongoDB", "Node/Express"]}
+            Logo={PoolWavesIcon}
+            logoClassName="text-sky-400"
+            link="https://app.hilliardguardmanager.com/"
+            linkLabel="app.hilliardguardmanager.com"
+            github="https://github.com/KyleWhite22/PoolRotation"
+          />
           <ProjectCard
             title="GameGeniusAI"
             description="Full-stack web app that ingests a user's library via the Steam Web API and generates similar-game
