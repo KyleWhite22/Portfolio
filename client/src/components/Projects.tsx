@@ -231,7 +231,7 @@ export default function Projects() {
             title="Lifeguard Rotation Manager"
             description="Developed and deployed a full-stack web app for the Hilliard Family Aquatic Center to manage rotations, breaks, and
  queues for over 50 lifeguards, with dynamic scheduling logic involving randomized guard assignments and age restrictions. Designed AWS architecture using API Gateway, Lambda, DynamoDB, S3, and CloudFront with CI/CD via GitHub Actions."
-            tools={["React", "JavaScript", "Vite", "OpenAI API", "Steam API", "MongoDB", "Node/Express"]}
+            tools={["React", "TypeScript", "Vite", "Node.js", "AWS"]}
             Logo={PoolWavesIcon}
             logoClassName="text-sky-400"
             link="https://app.hilliardguardmanager.com/"
