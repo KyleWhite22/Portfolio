@@ -15,7 +15,7 @@ export default defineConfig(({ command }) => {
             Sitemap({
               hostname: 'https://kyle-white.com',
               dynamicRoutes: ['/', '/personal'],
-              generateRobotsTxt: true,
+              generateRobotsTxt: false,
             }),
           ]
         : []),
