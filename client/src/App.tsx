@@ -1,14 +1,23 @@
 // src/App.tsx
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import AppShell from './ui/AppShell'
-import Home from './pages/Home'
+import ProAppShell from './ui/ProAppShell'
+import PerAppShell from './ui/PerAppShell'
+import ProHome from './pages/ProfessionalHome'
+import PerHome from './pages/PersonalHome'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <AppShell />,
+    element: <ProAppShell />,
     children: [
-      { index: true, element: <Home /> },
+      { index: true, element: <ProHome /> }
+    ],
+  },
+  {
+    path: '/personal',
+    element: <PerAppShell />,
+    children: [
+        {index: true, element: <PerHome />}
     ],
   },
 ])
