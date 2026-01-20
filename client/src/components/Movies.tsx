@@ -1,7 +1,7 @@
 //src/components/Movies.tsx
 import goodfellasPoster from "../assets/movies/goodfellas.jpg";
 import lebowksiPoster from "../assets/movies/lebowski.jpg";
-import bladeRunnerPoster from "../assets/movies/bladeRunner.jpg";
+import bladeRunnerPoster from "../assets/movies/bladerunner.jpg";
 import whiplashPoster from "../assets/movies/whiplash.jpg";
 import se7enPoster from "../assets/movies/se7en.jpg";
 import casinoPoster from "../assets/movies/casino.jpg";
