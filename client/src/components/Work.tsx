@@ -17,6 +17,20 @@ type WorkItem = {
 };
 
 const work: WorkItem[] = [
+     {
+    company: "Kroger",
+    role: "Software Engineer — Locations & Geospatial",
+    dates: "May 2026 - Present",
+    location: "Cincinnati, OH",
+    bullets: [
+  "Developed new enhanced endpoints for Geospatial service",
+  "Migrated on-prem legacy services to updated architecture",
+  "Built AI developer pipelines to plan and execute JIRA tickets"
+],
+    logoSrc: krogerLogo,
+    logoAlt: "Kroger logo",
+    link: "https://www.thekrogerco.com/",
+  },
    {
     company: "Cincinnati Insurance Companies",
     role: "Software Developer Intern",
